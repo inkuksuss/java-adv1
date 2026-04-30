@@ -6,6 +6,7 @@ public class ThreadUtils {
         try {
             Thread.currentThread().sleep(ms);
         } catch (InterruptedException e) {
+            log("인터럽트 발생, " + e.getMessage());
             throw new RuntimeException(e);
         }
     }
